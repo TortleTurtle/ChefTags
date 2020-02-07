@@ -1,0 +1,97 @@
+/*Basic Styling*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: #101623;
+}
+main {
+    height: 100vh;
+    overflow: hidden;
+}
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.column{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 5em;
+    color: #11A1B5;
+    text-shadow: 2px 2px #000;
+}
+h2 {
+    font-family: "Amaranth", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #EAA64D;
+    text-shadow: 2px 2px #000;
+}
+
+/*header*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #101623;
+    transition: top 0.5s ease-out;
+    z-index: 10;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto 0 auto 0;
+}
+.nav-item {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 700;
+    size: 2em;
+    color: #11A1B5;
+}
+header img {
+    height: 10vh;
+    margin-left: 5em;
+}
+.background-img {
+    height: 100vh;
+    z-index: 1;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+#welcome h1 span {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    text-decoration: underline;
+}
