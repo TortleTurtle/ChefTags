@@ -20,9 +20,11 @@ const mobileNav = () => {
       //animate burger
       if (burger.style.transform){
         burger.style.transform = '';
+        burger.style.color = '#11A1B5';
       }
       else {
         burger.style.transform = "rotate(90deg)";
+        burger.style.color = '#EAA64D';
       }
   
     });

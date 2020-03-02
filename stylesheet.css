@@ -14,6 +14,7 @@ body{
     background-color: #101623;
 }
 section {
+    width: 100%;
     min-height: 50vh;
     margin-top: 25vh;
     z-index: 5;
@@ -71,7 +72,7 @@ h2 {
 h3{
     font-family: "Source Code Pro", monospace;
     font-size: 1.5em;
-    color: #101623;
+    color: #11A1B5;
 }
 p {
     font-family: "Source Code Pro", monospace;
@@ -133,11 +134,17 @@ nav{
 }
 .burger {
     display: none;
-    color: white;
-    transition: color;
+    color: #11A1B5;
     font-size: 1.5em;
-    margin-left: 1em;
-} 
+}
+header img {
+    display: none;
+    height: 8vh;
+    width: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
 @media screen and (max-width: 600px){
     nav {
         position: absolute;
@@ -151,8 +158,8 @@ nav{
         background-color: #101623;
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
-        transition: transform 0.5s ease-in;
-        -webkit-transition: -webkit-transform 0.5s ease-in;
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
     }
     .nav-active {
         transform: translateX(0%);
@@ -163,9 +170,15 @@ nav{
     }
     .burger {
         display: block;
+        position: relative;
+        left: -40%;
         cursor: pointer;
-        transition: transform 0.5s ease;
-        order: 1;
+        margin: 1em;
+        transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+        z-index: 20;
+    }
+    header img {
+        display: block;
     }
 }
 .background-img {
@@ -218,6 +231,10 @@ nav{
     width: 25%;
     text-decoration: none;
 }
+.gallery h3 {
+    color: #101623;
+}
+
 @media screen and (max-width: 765px){
     .gallery{
         align-items: center;
