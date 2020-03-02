@@ -1,4 +1,3 @@
-/*Basic Styling*/
 *{
     margin: 0;
     padding: 0;
@@ -44,6 +43,15 @@ section {
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width: 762px) {
+    .row {
+        flex-flow: column;
+    }
+    .column {
+        width: 100%;
+    }
+}
+
 h1 {
     font-family: "Source Code Pro", monospace;
     font-size: 5em;
@@ -70,8 +78,27 @@ p {
     color: whitesmoke;
     margin: 0 0 1em 0;
 }
+@media screen and (max-width: 850px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 0.75em;
+    }
+}
+
 img {
     width: 100%;
+}
+.column img {
+    width: 90%;
+    border-radius: 50%;
 }
 
 /*header*/
@@ -104,8 +131,42 @@ nav{
 .nav-item:hover {
     color: #EAA64D;
 }
-header .img-container {
-    width: 8%;
+.burger {
+    display: none;
+    color: white;
+    transition: color;
+    font-size: 1.5em;
+    margin-left: 1em;
+} 
+@media screen and (max-width: 600px){
+    nav {
+        position: absolute;
+        left: 0px;
+        height: 100vh;
+        top: 0;
+        z-index: 10;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        background-color: #101623;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        -webkit-transition: -webkit-transform 0.5s ease-in;
+    }
+    .nav-active {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+    }
+    .navItem {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+        order: 1;
+    }
 }
 .background-img {
     width: 100vw;
@@ -141,6 +202,14 @@ header .img-container {
 #webdevelopment .center {
     order: 1;
 }
+@media screen and (max-width: 762px){
+    #webdevelopment .left {
+        order: 1;
+    }
+    #webdevelopment .center {
+        order: 2;
+    }
+}
 
 .gallery {
     flex-wrap: wrap;
@@ -148,6 +217,14 @@ header .img-container {
 .gallery-item{
     width: 25%;
     text-decoration: none;
+}
+@media screen and (max-width: 765px){
+    .gallery{
+        align-items: center;
+    }
+    .gallery-item{
+        width: 80%;
+    }
 }
 .thumbnail {
     padding: 1em;
@@ -169,4 +246,9 @@ ul {
 }
 ul a {
     color: #EAA64D;
+}
+@media screen and (max-width: 600px){
+    ul {
+        font-size: 1.25em;
+    }
 }
