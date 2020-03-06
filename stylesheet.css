@@ -209,6 +209,7 @@ header img {
 }
 
 #about img {
+    border: solid 6px #EAA64D;
     border-radius: 50%;
 }
 
