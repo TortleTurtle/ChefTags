@@ -270,6 +270,12 @@ iframe {
 /*portfolio id's*/
 #personalia ul {
     font-size: 1.6em;
+    list-style: none;
+}
+@media screen and (max-width: 850px) {
+    #personalia ul {
+        font-size: 0.8em;
+    }
 }
 #personalia img {
     border: solid 6px #EAA64D;
