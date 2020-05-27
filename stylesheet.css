@@ -12,6 +12,7 @@ body{
     width: 100%;
     height: auto;
     background-color: #101623;
+    padding: 0 0 6em 0;
 }
 section {
     width: 100%;
@@ -44,7 +45,7 @@ section {
     align-items: center;
     justify-content: center;
 }
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 800px) {
     .row {
         flex-flow: column;
     }
@@ -90,6 +91,11 @@ ul {
     font-family: 'Source Code Pro', monospace;
     font-size: 1em;
     color: white;
+}
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 0.8em;
+    }
 }
 @media screen and (max-width: 850px) {
     h1 {
@@ -159,6 +165,7 @@ header img {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    border: none;
 }
 @media screen and (max-width: 600px){
     nav {
@@ -245,7 +252,7 @@ iframe {
 #services .center {
     order: 1;
 }
-@media screen and (max-width: 762px){
+@media screen and (max-width: 800px){
     #services .left {
         order: 1;
     }
@@ -272,6 +279,11 @@ iframe {
     font-size: 1.6em;
     list-style: none;
 }
+@media screen and (max-width: 1250px) {
+    #personalia ul {
+        font-size: 1em;
+    }
+}
 @media screen and (max-width: 850px) {
     #personalia ul {
         font-size: 0.8em;
@@ -280,6 +292,9 @@ iframe {
 #personalia img {
     border: solid 6px #EAA64D;
     border-radius: 50%;
+}
+#mijzelf .column {
+    width: 100%;
 }
 #cuppy .left {
     order: 2;
@@ -293,7 +308,11 @@ iframe {
 #essay .center {
     order: 1;
 }
-@media screen and (max-width: 762px){
+@media screen and (max-width: 800px){
+    #personalia .left {
+        align-items: center;
+        margin-bottom: 2em;
+    }
     #cuppy .left {
         order: 1;
     }
