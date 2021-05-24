@@ -241,14 +241,19 @@ header img {
 }
 .gallery h3 {
     color: #101623;
+    font-size: 1.2vw;
+    text-align: center;
 }
 
-@media screen and (max-width: 765px){
+@media screen and (max-width: 992px){
     .gallery{
         align-items: center;
     }
     .gallery-item{
         width: 80%;
+    }
+    .gallery h3 {
+        font-size: 3vw;
     }
 }
 .thumbnail {
