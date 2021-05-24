@@ -12,6 +12,7 @@ body{
     width: 100%;
     height: auto;
     background-color: #101623;
+    padding: 0 0 6em 0;
 }
 section {
     width: 100%;
@@ -44,7 +45,7 @@ section {
     align-items: center;
     justify-content: center;
 }
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 800px) {
     .row {
         flex-flow: column;
     }
@@ -79,6 +80,23 @@ p {
     color: whitesmoke;
     margin: 0 0 1em 0;
 }
+a {
+    color: #11A1B5;
+    transition: color 0.25s ease-in;
+}
+a:hover {
+    color: #EAA64D;
+}
+ul {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: white;
+}
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 0.8em;
+    }
+}
 @media screen and (max-width: 850px) {
     h1 {
         font-size: 3em;
@@ -92,10 +110,14 @@ p {
     p {
         font-size: 0.75em;
     }
+    ul {
+        font-size: 0.75em;
+    }
 }
 
 img {
     width: 100%;
+    border: solid 6px #EAA64D;
 }
 .column img {
     width: 90%;
@@ -143,6 +165,7 @@ header img {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    border: none;
 }
 @media screen and (max-width: 600px){
     nav {
@@ -194,7 +217,14 @@ header img {
     filter: blur(3px);
     -webkit-filter: blur(3px);
 }
+iframe {
+    width: 80%;
+    height: auto;
+    min-height: 365px;
+    border: 5px solid #EAA64D;
+}
 
+/*index id's*/
 #welcome .row {
     background-color: transparent;
 }
@@ -206,6 +236,9 @@ header img {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     text-decoration: underline;
+}
+#welcome img {
+    border: none;
 }
 
 #about img {
@@ -219,15 +252,77 @@ header img {
 #services .center {
     order: 1;
 }
-#services img {
-    border: solid 6px;
-    color: #EAA64D;
-}
-@media screen and (max-width: 762px){
+@media screen and (max-width: 800px){
     #services .left {
         order: 1;
     }
     #services .center {
+        order: 2;
+    }
+}
+#contact ul {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    color: #11A1B5;
+}
+#contact ul a {
+    color: #EAA64D;
+}
+@media screen and (max-width: 600px){
+    #contact ul {
+        font-size: 1.25em;
+    }
+}
+
+/*portfolio id's*/
+#personalia ul {
+    font-size: 1.6em;
+    list-style: none;
+}
+@media screen and (max-width: 1250px) {
+    #personalia ul {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 850px) {
+    #personalia ul {
+        font-size: 0.8em;
+    }
+}
+#personalia img {
+    border: solid 6px #EAA64D;
+    border-radius: 50%;
+}
+#mijzelf .column {
+    width: 100%;
+}
+#cuppy .left {
+    order: 2;
+}
+#cuppy .center {
+    order: 1;
+}
+#essay .left {
+    order: 2;
+}
+#essay .center {
+    order: 1;
+}
+@media screen and (max-width: 800px){
+    #personalia .left {
+        align-items: center;
+        margin-bottom: 2em;
+    }
+    #cuppy .left {
+        order: 1;
+    }
+    #cuppy .center {
+        order: 2;
+    }
+    #essay .left {
+        order: 1;
+    }
+    #essay .center {
         order: 2;
     }
 }
@@ -269,19 +364,6 @@ header img {
     transform: scale(1.10);
 }
 
-ul {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5em;
-    color: #11A1B5;
-}
-ul a {
-    color: #EAA64D;
-}
-@media screen and (max-width: 600px){
-    ul {
-        font-size: 1.25em;
-    }
-}
 footer {
     width: 100%;
     min-height: 5vh;
