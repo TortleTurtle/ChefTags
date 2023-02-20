@@ -1,0 +1,20 @@
+@use "colors";
+html {
+  overflow-x: scroll;
+}
+
+h1 {
+  font-size: 2em;
+  color: colors.$highlight-primary;
+}
+h2 {
+  font-size: 2.5em;
+  color: colors.$highlight-primary;
+}
+h3 {
+  font-size: 2.25em;
+  color: colors.$white;
+}
+p {
+  font-size: 1em;
+}

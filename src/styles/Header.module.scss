@@ -1,0 +1,114 @@
+@use "colors";
+@use "breakpoints";
+
+$headerHeigth: 10vh;
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 100;
+  height: $headerHeigth;
+  width: 100%;
+
+  background-color: colors.$background-secondary;
+  border-bottom: colors.$highlight-primary 2px solid;
+
+  h2 {
+    margin: 0 0 0 1em;
+  }
+
+  nav {
+    //use flex to center items horizontally
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    //deduct headerHeight from 100vh to fit it under the header.
+    height: 100vh - $headerHeigth;
+    width: 40vw;
+
+    //absolute position with right 0 and transform to hide the element.
+    position: absolute;
+    right: 0;
+    top: $headerHeigth; // top is headerHight so its under the header.
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+
+    //nav blocks the bottom-border of nav. To fix this we draw a top border on nav.
+    background-color: inherit;
+    border-top: colors.$highlight-primary 2px solid;
+
+    @include breakpoints.respond-to('small'){
+      //Code to transform nav into desktop nav.
+      flex-flow: row nowrap; //set direction to row.
+      gap: 2em; //gap to space out.
+
+      height: auto;
+      width: auto;
+
+      position: static; //static so top and right no longer have an effect.
+
+      border-top: none; //remove border from top.
+      margin-right: 2em;
+    }
+
+    //Link styling
+    a {
+      color: colors.$highlight-secondary;
+      transition: color 0.5s ease-in;
+
+      text-decoration: none;
+
+      &:hover{
+        color: colors.$highlight-primary;
+      }
+    }
+  }
+  .navToggle {
+    transform: translateX(0);
+  }
+}
+
+.burger {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+
+  background: none;
+  border: none;
+
+  transform-origin: center;
+  transition: transform 1s ease-in-out;
+
+  @include breakpoints.respond-to('small'){
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .line {
+    //line width is smaller then burger width because for some reason they're sticking out otherwise ?!?
+    width: 40px;
+    height: 5px;
+    background-color: colors.$highlight-secondary;
+    transition: background-color 1s ease-in-out;
+  }
+  .lineToggle {
+    background-color: colors.$highlight-primary;
+  }
+}
+.burgerToggle {
+  transform: rotate(90deg);
+}
