@@ -25,3 +25,7 @@ $breakpoints: (
   }
 }
 
+@mixin flex-flow($direction: row, $wrap: nowrap){
+  display: flex;
+  flex-flow: $direction $wrap;
+}

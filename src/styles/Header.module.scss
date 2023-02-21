@@ -1,11 +1,10 @@
 @use "colors";
-@use "breakpoints";
+@use "mixins";
 
 $headerHeigth: 10vh;
 
 .header {
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-flow();
   align-items: center;
   justify-content: space-between;
 
@@ -23,8 +22,7 @@ $headerHeigth: 10vh;
 
   nav {
     //use flex to center items horizontally
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex-flow(column);
     align-items: center;
     justify-content: space-evenly;
 
@@ -43,7 +41,7 @@ $headerHeigth: 10vh;
     background-color: inherit;
     border-top: colors.$highlight-primary 2px solid;
 
-    @include breakpoints.respond-to('small'){
+    @include mixins.respond-to('small'){
       //Code to transform nav into desktop nav.
       flex-flow: row nowrap; //set direction to row.
       gap: 2em; //gap to space out.
@@ -51,10 +49,11 @@ $headerHeigth: 10vh;
       height: auto;
       width: auto;
 
-      position: static; //static so top and right no longer have an effect.
+      position: static; //static so it becomes a flex-item.
+      transform: translateX(0);
+      margin-right: 2em;
 
       border-top: none; //remove border from top.
-      margin-right: 2em;
     }
 
     //Link styling
@@ -90,7 +89,7 @@ $headerHeigth: 10vh;
   transform-origin: center;
   transition: transform 1s ease-in-out;
 
-  @include breakpoints.respond-to('small'){
+  @include mixins.respond-to('small'){
     display: none;
   }
 
