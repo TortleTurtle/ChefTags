@@ -1,5 +1,5 @@
-import '@/styles/globals.scss'
 import 'normalize.css/normalize.css'
+import '@/styles/globals.scss'
 import { Open_Sans } from "@next/font/google";
 
 const openSans = Open_Sans({subsets: ['latin']});
