@@ -5,8 +5,7 @@ $headerHeigth: 10vh;
 
 .header {
   @include mixins.flex-flow();
-  align-items: center;
-  justify-content: space-between;
+  @include mixins.flexJustify-Align(space-between, center);
 
   position: relative;
   z-index: 100;
@@ -23,8 +22,7 @@ $headerHeigth: 10vh;
   nav {
     //use flex to center items horizontally
     @include mixins.flex-flow(column);
-    align-items: center;
-    justify-content: space-evenly;
+    @include mixins.flexJustify-Align(space-evenly, center);
 
     //deduct headerHeight from 100vh to fit it under the header.
     height: 100vh - $headerHeigth;

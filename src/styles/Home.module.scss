@@ -34,6 +34,8 @@ $breakpoint: 'large';
     }
     h3 {
       width: 60%;
+      margin-top: 1rem;
+      line-height: 150%;
 
       @include mixins.respond-to($breakpoint){
         width: auto;
