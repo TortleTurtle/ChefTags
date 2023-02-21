@@ -1,0 +1,18 @@
+@use 'colors';
+@use 'mixins';
+
+.textBlock {
+  @include mixins.flex-flow();
+  @include mixins.flexJustify-Align();
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  background-color: colors.$background-secondary;
+  padding: 1rem;
+
+  p {
+    padding-top: 1rem;
+  }
+}

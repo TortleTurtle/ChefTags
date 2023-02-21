@@ -5,10 +5,10 @@ html {
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p{
   font-weight: 600;
   font-stretch: condensed;
-  margin: 1rem 0 0 1rem;
+  margin: 0;
 }
 
 h1 {
@@ -45,7 +45,9 @@ h3 {
   }
 }
 p, a {
+  font-weight: normal;
   font-size: 1rem;
+  color: colors.$white;
 
   @include mixins.respond-to('medium') {
     font-size: 1.25rem;
