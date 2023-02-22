@@ -42,7 +42,7 @@ export default function Home() {
             <main className={styles.main}>
                 {/*TODO: Fetch content for Text Block & Showcase*/}
                 <TextBlock/>
-                <section>
+                <section className={styles.showcase}>
                     <h2>Hier ben ik trots op</h2>
                     <Showcase/>
                 </section>

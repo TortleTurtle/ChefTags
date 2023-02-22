@@ -3,6 +3,7 @@ import Image from "next/image";
 import hero from "/public/FoF_Hero.png"
 export default function ShowcaseItem(props) {
     return (
+        // TODO: Fill content based on props.
         <div className={props.className}>
             <div className={styles.title}>
                 <h2>Forest of Frequencies</h2>

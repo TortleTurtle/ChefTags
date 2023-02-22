@@ -4,8 +4,12 @@
   @include mixins.flex-flow(column, nowrap);
   @include mixins.flexJustify-Align(space-around, stretch);
   gap: 2rem;
-  padding: 2rem 0;
 
   width: 100%;
+  padding: 2rem 0;
 
+  @include mixins.respond-to('extra large'){
+    padding: 4rem 0;
+    gap: 4rem;
+  }
 }

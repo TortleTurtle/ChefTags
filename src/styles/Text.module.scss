@@ -5,6 +5,10 @@
   @include mixins.flex-flow();
   @include mixins.flexJustify-Align();
   padding: 1rem;
+
+  @include mixins.respond-to('extra large'){
+    padding: 4rem;
+  }
 }
 
 .container {
@@ -12,7 +16,15 @@
   background-color: colors.$background-secondary;
   padding: 1rem;
 
+  @include mixins.respond-to('extra large'){
+    padding: 2rem;
+  }
+
   p {
     padding-top: 1rem;
+
+    @include mixins.respond-to('extra large'){
+      padding-top: 2rem;
+    }
   }
 }

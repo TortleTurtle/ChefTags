@@ -3,13 +3,6 @@
 
 $breakpoint: 'large';
 
-.main {
-  width: 100%;
-  min-height: 100vh;
-  background-color: colors.$background-primary;
-  padding-top: 1rem;
-}
-
 .banner {
   display: block;
   position: relative;
@@ -70,5 +63,19 @@ $breakpoint: 'large';
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: colors.$background-primary;
+  padding-top: 1rem;
+}
+
+.showcase {
+  h2 {
+    width: 100%;
+    text-align: center;
   }
 }
