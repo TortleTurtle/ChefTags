@@ -1,8 +1,8 @@
 $breakpoints: (
-        'small': 600px,
-        'medium':  767px,
-        'large': 992px,
-        'extra large':  1200px
+        'small': 600px, //phones
+        'medium':  767px, //portrait tablet & large phones
+        'large': 992px, //landscape tablet & small computers screens
+        'extra large':  1200px //big computer screens
 ) !default;
 
 /// Mixin to manage responsive breakpoints

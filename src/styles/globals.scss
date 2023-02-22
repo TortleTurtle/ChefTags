@@ -2,6 +2,7 @@
 @use "mixins";
 
 html {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -37,7 +38,7 @@ h3 {
   font-size: 1rem;
   color: colors.$white;
 
-  @include mixins.respond-to('large') {
+  @include mixins.respond-to('medium') {
     font-size: 1.25rem;
   }
   @include mixins.respond-to('large') {
@@ -51,5 +52,8 @@ p, a {
 
   @include mixins.respond-to('medium') {
     font-size: 1.25rem;
+  }
+  @include mixins.respond-to('large') {
+    font-size: 2rem;
   }
 }
