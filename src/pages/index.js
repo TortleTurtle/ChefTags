@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import Image from "next/image";
 import profileImg from "/public/me.png";
 import backgroundImg from "/public/wijnhaven.JPEG"
 import TextBlock from "@/components/TextBlock";
+import Showcase from "@/components/Showcase";
 
 export default function Home() {
     return (
@@ -39,8 +40,12 @@ export default function Home() {
                 />
             </div>
             <main className={styles.main}>
-                {/*TODO: Fetch content for Text Block*/}
+                {/*TODO: Fetch content for Text Block & Showcase*/}
                 <TextBlock/>
+                <section>
+                    <h2>Hier ben ik trots op</h2>
+                    <Showcase/>
+                </section>
             </main>
         </>
     )

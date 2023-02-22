@@ -1,0 +1,71 @@
+@use 'colors';
+@use 'mixins';
+
+%showcaseItem {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+
+  height: auto;
+  padding: 1rem 0;
+  background-color: colors.$background-secondary;
+}
+.thumbnail {
+  @include mixins.flex-flow();
+  grid-row: 2 / 3;
+  width: 90%;
+  height: 100%;
+  background-color: colors.$highlight-secondary;
+
+    img {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+    }
+}
+
+.title {
+  @include mixins.flex-flow(column);
+  @include mixins.flexJustify-Align(center, center);
+  //grid-template-rows: 1 / 2;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.left {
+  @extend %showcaseItem;
+  margin: 0 1rem 0 0;
+
+  .title {
+    margin-left: 1rem;
+  }
+
+  .thumbnail {
+    @include mixins.flexJustify-Align(start);
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+
+    img {
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    }
+  }
+}
+.right {
+  @extend %showcaseItem;
+  margin: 0 0 0 1rem;
+
+  .title {
+    margin-right: 1rem;
+  }
+
+  .thumbnail {
+    @include mixins.flexJustify-Align(start);
+    margin-left: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+    @include mixins.flexJustify-Align(end);
+
+    img {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+    }
+  }
+}
