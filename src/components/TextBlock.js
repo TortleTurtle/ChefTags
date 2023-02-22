@@ -1,7 +1,7 @@
 import styles from '@/styles/Text.module.scss'
 export default function TextBlock() {
     // Todo: Use props to fill content.
-    return <div className={styles.textBlock}>
+    return <section className={styles.textBlock}>
         <div className={styles.container}>
         <h2>Ik ben Daniël</h2>
         <h3>Maar iedereen noemt me Daan</h3>
@@ -11,5 +11,5 @@ export default function TextBlock() {
             tincidunt. Nunc sed id semper risus in hendrerit gravida. Id interdum velit laoreet id. Nibh ipsum consequat
             nisl vel pretium. Non pulvinar neque laoreet suspendisse interdum. Purus gravida quis blandit turpis.</p>
         </div>
-    </div>;
+    </section>;
 }
