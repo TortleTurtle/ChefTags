@@ -6,6 +6,7 @@ import profileImg from "/public/me.png";
 import backgroundImg from "/public/wijnhaven.JPEG"
 import TextBlock from "@/components/TextBlock";
 import Showcase from "@/components/Showcase";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -45,6 +46,9 @@ export default function Home() {
                 <section className={styles.showcase}>
                     <h2>Hier ben ik trots op</h2>
                     <Showcase/>
+                        <Link className={styles.seeMore} href={'/projecten'}>
+                            <h2>Wil je meer zien?</h2>
+                        </Link>
                 </section>
             </main>
         </>
