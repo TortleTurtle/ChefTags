@@ -1,0 +1,68 @@
+@use "colors";
+@use "mixins";
+
+$breakpoint: 'large';
+
+.banner {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: auto;
+  background-color: colors.$background-primary;
+
+  @include mixins.respond-to($breakpoint){
+    @include mixins.flex-flow();
+    @include mixins.flexJustify-Align(end);
+    height: 90vh;
+  }
+
+  .title {
+    @include mixins.absoluteTopLeft(50%, 50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 2;
+
+    padding: 1rem;
+    background-color: colors.$background-secondary;
+    border: colors.$highlight-secondary 2px solid;
+
+    letter-spacing: 10px;
+    text-shadow: black 2px 2px;
+
+    h1, h3 {
+      width: fit-content;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      line-height: 150%;
+    }
+
+    @include mixins.respond-to('small') {
+      @include mixins.absoluteTopLeft(5vw, 5vw);
+      transform: none;
+      width: 50%;
+
+    }
+
+    @include mixins.respond-to($breakpoint){
+      position: static;
+      border-right: none;
+    }
+  }
+
+  .background {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+
+    object-fit: cover;
+
+    @include mixins.respond-to($breakpoint){
+      @include mixins.absoluteTopLeft();
+      height: 100%;
+    }
+  }
+}
