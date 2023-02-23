@@ -1,6 +1,10 @@
 @use "colors";
 @use "mixins";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   width: 100%;
   overflow-x: hidden;

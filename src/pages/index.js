@@ -7,6 +7,7 @@ import backgroundImg from "/public/wijnhaven.JPEG"
 import TextBlock from "@/components/TextBlock";
 import Showcase from "@/components/Showcase";
 import Link from "next/link";
+import Contact from "@/components/Contact";
 
 export default function Home() {
     return (
@@ -50,6 +51,7 @@ export default function Home() {
                             <h2>Wil je meer zien?</h2>
                         </Link>
                 </section>
+                <Contact/>
             </main>
         </>
     )
