@@ -1,9 +1,6 @@
 import Head from "next/head";
 import Showcase from "@/components/Showcase";
-import Contact from "@/components/Contact";
 import {Banner} from "@/components/Banner";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default function Projecten(){
     return(
