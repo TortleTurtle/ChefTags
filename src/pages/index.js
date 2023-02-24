@@ -16,7 +16,6 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Header/>
             <BannerHome/>
             <main className={styles.main}>
                 {/*TODO: Fetch content for Text Block & Showcase*/}
@@ -28,7 +27,6 @@ export default function Home() {
                         <h2>Wil je meer zien?</h2>
                     </Link>
                 </section>
-                <Contact/>
             </main>
         </>
     )

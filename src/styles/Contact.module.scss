@@ -36,8 +36,11 @@
   }
 
   a {
-    aspect-ratio: 1;
     width: 100%;
+    text-align: center;
+    text-decoration: none;
+    @include mixins.flex-flow(column);
+    @include mixins.flexJustify-Align(space-between);
 
     filter: brightness(0) saturate(100%) invert(70%) sepia(14%) saturate(5894%) hue-rotate(344deg) brightness(105%) contrast(88%);
 
