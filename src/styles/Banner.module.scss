@@ -14,7 +14,7 @@ $breakpoint: 'large';
 
   @include mixins.respond-to($breakpoint){
     @include mixins.flex-flow();
-    @include mixins.flexJustify-Align(end);
+    @include mixins.flexJustify-Align(flex-end);
     height: 90vh;
   }
 
