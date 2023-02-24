@@ -11,7 +11,6 @@ export default function Header() {
             <nav className={toggle ? styles.navToggle : ''}>
                 <Link href={'/'}>Home</Link>
                 <Link href={'/projecten'}>Projecten</Link>
-                <Link href={'/contact'}>Contact</Link>
             </nav>
             <button className={`${styles.burger} ${toggle ? styles.burgerToggle : ''}`} onClick={() => setToggle(!toggle)}>
                 <div className={`${styles.line} ${toggle ? styles.lineToggle : ''}`}/>
