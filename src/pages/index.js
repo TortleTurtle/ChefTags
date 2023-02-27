@@ -1,13 +1,11 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
-import Header from "@/components/Header";
 import TextBlock from "@/components/TextBlock";
 import Showcase from "@/components/Showcase";
 import Link from "next/link";
-import Contact from "@/components/Contact";
 import {BannerHome} from "@/components/BannerHome";
 
-export default function Home() {
+export default function Home({home, showcase}) {
     return (
         <>
             <Head>
@@ -18,8 +16,9 @@ export default function Home() {
             </Head>
             <BannerHome/>
             <main className={styles.main}>
-                {/*TODO: Fetch content for Text Block & Showcase*/}
-                <TextBlock/>
+                {/*TODO: Fetch content for Showcase*/}
+                <TextBlock title={home.data.attributes.Title} subtitle={home.data.attributes.Subtitle}
+                           description={home.data.attributes.Description}/>
                 <section className={styles.showcase}>
                     <h2>Hier ben ik trots op</h2>
                     <Showcase/>
@@ -30,4 +29,18 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+    const homeResponse = await fetch(`${process.env.API_URL}/home?populate=*`);
+    const home = await homeResponse.json();
+    const showcaseResponse = await fetch(`${process.env.API_URL}/projects?filter[Feature][$eq]=true&fields[0]=Title&fields[1]=Subtitle&populate=Hero`);
+    const showcase = await showcaseResponse.json();
+
+    return {
+        props: {
+            home,
+            showcase
+        }
+    }
 }
