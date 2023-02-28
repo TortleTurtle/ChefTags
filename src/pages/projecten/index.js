@@ -2,8 +2,10 @@ import Head from "next/head";
 import Showcase from "@/components/Showcase";
 import {Banner} from "@/components/Banner";
 
-export default function Projecten(){
-    return(
+export default function Projecten({projects, projectIndex}) {
+    const hero = projectIndex.data.attributes.Hero.data.attributes;
+
+    return (
         <>
             <Head>
                 <title>Projecten</title>
@@ -12,9 +14,23 @@ export default function Projecten(){
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
-                <Banner/>
-                <Showcase/>
+                <Banner hero={hero}/>
+                <Showcase projects={projects.data}/>
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+    const projectsRes = await fetch(`${process.env.STRAPI_API_URL}/projects?fields[0]=Title&fields[1]=Subtitle&populate=Hero`);
+    const projects = await projectsRes.json();
+    const projectIndexRes = await fetch(`${process.env.STRAPI_API_URL}/project-list?populate=*`);
+    const projectIndex = await projectIndexRes.json();
+
+    return {
+        props: {
+            projects,
+            projectIndex
+        }
+    }
 }

@@ -1,20 +1,18 @@
 import styles from "@/styles/Banner.module.scss";
 import Image from "next/image";
-import profileImg from "../../public/me.png";
-import backgroundImg from "../../public/wijnhaven.JPEG";
 
-export function Banner() {
+export function Banner({hero}) {
+
     return <div className={styles.banner}>
         <div className={styles.title}>
             <h1>Projecten</h1>
             <h3>Waar hou ik me mee bezig?</h3>
         </div>
-        {/*Todo: Fetch images from Api*/}
         <Image
-            src={backgroundImg}
-            alt={""}
-            width={2048}
-            height={1536}
+            src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${hero.url}`}
+            alt={hero.alternativeText}
+            width={hero.width}
+            height={hero.height}
             className={styles.background}
         />
     </div>;
