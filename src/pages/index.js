@@ -21,7 +21,7 @@ export default function Home({home, showcase}) {
                            description={home.data.attributes.Description}/>
                 <section className={styles.showcase}>
                     <h2>Hier ben ik trots op</h2>
-                    <Showcase/>
+                    <Showcase projects={showcase.data}/>
                     <Link className={styles.seeMore} href={'/projecten'}>
                         <h2>Wil je meer zien?</h2>
                     </Link>
@@ -32,9 +32,9 @@ export default function Home({home, showcase}) {
 }
 
 export async function getStaticProps() {
-    const homeResponse = await fetch(`${process.env.API_URL}/home?populate=*`);
+    const homeResponse = await fetch(`${process.env.STRAPI_API_URL}/home?populate=*`);
     const home = await homeResponse.json();
-    const showcaseResponse = await fetch(`${process.env.API_URL}/projects?filter[Feature][$eq]=true&fields[0]=Title&fields[1]=Subtitle&populate=Hero`);
+    const showcaseResponse = await fetch(`${process.env.STRAPI_API_URL}/projects?filter[Feature][$eq]=true&fields[0]=Title&fields[1]=Subtitle&populate=Hero`);
     const showcase = await showcaseResponse.json();
 
     return {

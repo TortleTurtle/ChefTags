@@ -1,19 +1,21 @@
 import styles from "@/styles/ShowcaseItem.module.scss"
 import Image from "next/image";
-import hero from "/public/FoF_Hero.png"
-export default function ShowcaseItem(props) {
+
+export default function ShowcaseItem({project, className}) {
+    const projectAttributes = project.attributes;
+    const hero = projectAttributes.Hero.data.attributes;
     return (
         // TODO: Fill content based on props.
-        <div className={props.className}>
+        <div className={className}>
             <div className={styles.title}>
-                <h2>Forest of Frequencies</h2>
-                <h3>3D adventure music game</h3>
+                <h2>{projectAttributes.Title}</h2>
+                <h3>{projectAttributes.Subtitle}</h3>
             </div>
             <div className={styles.thumbnail}>
-                <Image src={hero}
-                       alt={''}
-                       width={1920}
-                       height={1080}
+                <Image src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${hero.url}`}
+                       alt={hero.alternativeText}
+                       width={hero.width}
+                       height={hero.height}
                 />
             </div>
         </div>
