@@ -6,6 +6,7 @@ import Link from "next/link";
 import {BannerHome} from "@/components/BannerHome";
 
 export default function Home({home, showcase}) {
+    const homeAttributes = home.data.attributes;
     return (
         <>
             <Head>
@@ -14,10 +15,10 @@ export default function Home({home, showcase}) {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <BannerHome/>
+            <BannerHome backgroundImg={homeAttributes.Background} portret={homeAttributes.Portret}/>
             <main className={styles.main}>
-                <TextBlock title={home.data.attributes.Title} subtitle={home.data.attributes.Subtitle}
-                           description={home.data.attributes.Description}/>
+                <TextBlock title={homeAttributes.Title} subtitle={homeAttributes.Subtitle}
+                           description={homeAttributes.Description}/>
                 <section className={styles.showcase}>
                     <h2>Hier ben ik trots op</h2>
                     <Showcase projects={showcase.data}/>
