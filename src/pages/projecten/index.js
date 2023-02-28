@@ -3,7 +3,8 @@ import Showcase from "@/components/Showcase";
 import {Banner} from "@/components/Banner";
 
 export default function Projecten({projects, projectIndex}) {
-    const hero = projectIndex.data.attributes.Hero.data.attributes;
+    const projectIndexAttributes = projectIndex.data.attributes;
+    const hero = projectIndexAttributes.Hero.data.attributes;
 
     return (
         <>
@@ -14,7 +15,7 @@ export default function Projecten({projects, projectIndex}) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
-                <Banner hero={hero}/>
+                <Banner hero={hero} title={projectIndexAttributes.Title} subtitle={projectIndexAttributes.Subtitle}/>
                 <Showcase projects={projects.data}/>
             </main>
         </>
