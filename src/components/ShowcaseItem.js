@@ -5,7 +5,6 @@ export default function ShowcaseItem({project, className}) {
     const projectAttributes = project.attributes;
     const hero = projectAttributes.Hero.data.attributes;
     return (
-        // TODO: Fill content based on props.
         <div className={className}>
             <div className={styles.title}>
                 <h2>{projectAttributes.Title}</h2>

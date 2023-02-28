@@ -16,7 +16,6 @@ export default function Home({home, showcase}) {
             </Head>
             <BannerHome/>
             <main className={styles.main}>
-                {/*TODO: Fetch content for Showcase*/}
                 <TextBlock title={home.data.attributes.Title} subtitle={home.data.attributes.Subtitle}
                            description={home.data.attributes.Description}/>
                 <section className={styles.showcase}>

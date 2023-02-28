@@ -11,7 +11,6 @@ export default function Showcase({projects}) {
         />);
 
     return (
-        // TODO: Load items based on props.
         <div className={ShowcaseStyles.showcase}>
             {showCaseItems}
         </div>
