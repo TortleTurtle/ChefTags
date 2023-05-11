@@ -1,11 +1,12 @@
 import styles from "@/styles/ShowcaseItem.module.scss"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ShowcaseItem({project, className}) {
     const projectAttributes = project.attributes;
     const hero = projectAttributes.Hero.data.attributes;
     return (
-        <div className={className}>
+        <Link href={`/projecten/${projectAttributes.Slug}`} className={className}>
             <div className={styles.title}>
                 <h2>{projectAttributes.Title}</h2>
                 <h3>{projectAttributes.Subtitle}</h3>
@@ -17,6 +18,6 @@ export default function ShowcaseItem({project, className}) {
                        height={hero.height}
                 />
             </div>
-        </div>
+        </Link>
     )
 }

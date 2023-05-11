@@ -34,7 +34,7 @@ export default function Home({home, showcase}) {
 export async function getStaticProps() {
     const homeResponse = await fetch(`${process.env.STRAPI_API_URL}/home?populate=*`);
     const home = await homeResponse.json();
-    const showcaseResponse = await fetch(`${process.env.STRAPI_API_URL}/projects?filter[Feature][$eq]=true&fields[0]=Title&fields[1]=Subtitle&populate=Hero`);
+    const showcaseResponse = await fetch(`${process.env.STRAPI_API_URL}/projects?filter[Feature][$eq]=true&fields[0]=Title&fields[1]=Subtitle&fields[2]=Slug&populate=Hero`);
     const showcase = await showcaseResponse.json();
 
     return {

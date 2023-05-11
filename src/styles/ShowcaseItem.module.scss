@@ -9,8 +9,9 @@
   height: auto;
   padding: 1rem 0;
   background-color: colors.$background-secondary;
+  text-decoration: none;
 
-  @include mixins.respond-to('large'){
+  @include mixins.respond-to('large') {
     padding: 2rem 0;
   }
 }
