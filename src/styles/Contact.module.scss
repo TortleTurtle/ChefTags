@@ -8,16 +8,6 @@
   @include mixins.respond-to('large') {
     padding: 4rem;
   }
-
-  a {
-    color: colors.$highlight-secondary;
-    transition: color 0.5s ease-in;
-
-    &:hover {
-      color: colors.$highlight-primary;
-    }
-  }
-
 }
 
 .container {

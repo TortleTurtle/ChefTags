@@ -56,14 +56,7 @@ $headerHeigth: 10vh;
 
     //Link styling
     a {
-      color: colors.$highlight-secondary;
-      transition: color 0.5s ease-in;
-
       text-decoration: none;
-
-      &:hover{
-        color: colors.$highlight-primary;
-      }
     }
   }
   .navToggle {
