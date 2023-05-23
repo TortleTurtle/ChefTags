@@ -5,13 +5,22 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  margin: 0;
   width: 100%;
   overflow-x: hidden;
+}
+
+html {
+  height: 100%;
   background-color: colors.$background-primary;
 }
 
-h1, h2, h3, p{
+body {
+  min-height: 100%;
+}
+
+h1, h2, h3, p {
   font-weight: 600;
   font-stretch: condensed;
   margin: 0;
