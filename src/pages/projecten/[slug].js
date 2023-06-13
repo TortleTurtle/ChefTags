@@ -4,6 +4,7 @@ import styles from "@/styles/ProjectDetail.module.scss";
 import Image from "next/image";
 import {useState} from "react";
 import closeIcon from "public/close.svg"
+import Head from "next/head";
 
 export default function ProjectDetail({project}) {
     const projectAttributes = project.data[0].attributes;
@@ -29,6 +30,11 @@ export default function ProjectDetail({project}) {
         setIsToggled(!isToggled);
     return (
         <>
+            <Head>
+                <title>{projectAttributes.Title}</title>
+                <meta name="description" content={projectAttributes.Subtitle}/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            </Head>
             <div className={`${styles.fullscreen} ${isToggled ? '' : styles.disabled}`}>
                 <Image src={closeIcon}
                        alt="close button"

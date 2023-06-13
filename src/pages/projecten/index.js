@@ -12,7 +12,6 @@ export default function Projecten({projects, projectIndex}) {
                 <title>Projecten</title>
                 <meta name="description" content="Lijst van projecten gemaakt door Daan Meijs"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main>
                 <Banner hero={hero} title={projectIndexAttributes.Title} subtitle={projectIndexAttributes.Subtitle}/>
