@@ -16,6 +16,7 @@ export function BannerHome({backgroundImg, portret}) {
             width={portretAttributes.width}
             height={portretAttributes.height}
             className={styles.profileImage}
+            priority={true}
         />
         <Image
             src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${backgroundAttributes.url}`}

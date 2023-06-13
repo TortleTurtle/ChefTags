@@ -16,6 +16,7 @@ export function Banner({hero, title, subtitle}) {
             width={hero.width}
             height={hero.height}
             className={styles.background}
+            priority={true}
         />
     </div>;
 }
