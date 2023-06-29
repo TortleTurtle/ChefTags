@@ -13,6 +13,7 @@ export default function Home({home, showcase}) {
                 <title>Chef Tags</title>
                 <meta name="description" content="Portfolio van Daan Meijs, designer en developer."/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="google-site-verification" content="jdvxLyeF3H6AlVtX8kix27ELIL03raeH30gc1si9aSA"/>
             </Head>
             <BannerHome backgroundImg={homeAttributes.Background} portret={homeAttributes.Portret}/>
             <main className={styles.main}>
